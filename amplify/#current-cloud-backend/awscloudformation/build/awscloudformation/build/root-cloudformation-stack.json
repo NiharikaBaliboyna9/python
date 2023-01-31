@@ -152,21 +152,10 @@
         }
       }
     },
-    "functioneradleadgenapiprod": {
-      "Type": "AWS::CloudFormation::Stack",
-      "Properties": {
-        "TemplateURL": "https://s3.amazonaws.com/amplify-eradleadgen-prod-104702-deployment/amplify-cfn-templates/function/eradleadgenapiprod-cloudformation-template.json",
-        "Parameters": {
-          "deploymentBucketName": "amplify-eradleadgen-prod-104702-deployment",
-          "s3Key": "amplify-builds/eradleadgenapiprod-4970312f5a47664f5475-build.zip",
-          "env": "prod"
-        }
-      }
-    },
     "apieradLeadgenApi": {
       "Type": "AWS::CloudFormation::Stack",
       "Properties": {
-        "TemplateURL": "https://s3.amazonaws.com/amplify-eradleadgen-prod-104702-deployment/amplify-cfn-templates/api/eradLeadgenApi-cloudformation-template.json",
+        "TemplateURL": "https://s3.amazonaws.com/amplify-eradleadgen-dev-141433-deployment/amplify-cfn-templates/api/eradLeadgenApi-cloudformation-template.json",
         "Parameters": {
           "functioneradleadgenapiprodName": {
             "Fn::GetAtt": [
@@ -180,7 +169,18 @@
               "Outputs.Arn"
             ]
           },
-          "env": "prod"
+          "env": "dev"
+        }
+      }
+    },
+    "functioneradleadgenapiprod": {
+      "Type": "AWS::CloudFormation::Stack",
+      "Properties": {
+        "TemplateURL": "https://s3.amazonaws.com/amplify-eradleadgen-dev-141433-deployment/amplify-cfn-templates/function/eradleadgenapiprod-cloudformation-template.json",
+        "Parameters": {
+          "deploymentBucketName": "amplify-eradleadgen-dev-141433-deployment",
+          "s3Key": "amplify-builds/eradleadgenapiprod-3457306d4a2b30375731-build.zip",
+          "env": "dev"
         }
       }
     }

@@ -151,6 +151,38 @@
           "Ref": "UnauthRoleName"
         }
       }
+    },
+    "apieradLeadgenApi": {
+      "Type": "AWS::CloudFormation::Stack",
+      "Properties": {
+        "TemplateURL": "https://s3.amazonaws.com/amplify-eradleadgen-dev-141433-deployment/amplify-cfn-templates/api/eradLeadgenApi-cloudformation-template.json",
+        "Parameters": {
+          "functioneradleadgenapiprodName": {
+            "Fn::GetAtt": [
+              "functioneradleadgenapiprod",
+              "Outputs.Name"
+            ]
+          },
+          "functioneradleadgenapiprodArn": {
+            "Fn::GetAtt": [
+              "functioneradleadgenapiprod",
+              "Outputs.Arn"
+            ]
+          },
+          "env": "dev"
+        }
+      }
+    },
+    "functioneradleadgenapiprod": {
+      "Type": "AWS::CloudFormation::Stack",
+      "Properties": {
+        "TemplateURL": "https://s3.amazonaws.com/amplify-eradleadgen-dev-141433-deployment/amplify-cfn-templates/function/eradleadgenapiprod-cloudformation-template.json",
+        "Parameters": {
+          "deploymentBucketName": "amplify-eradleadgen-dev-141433-deployment",
+          "s3Key": "amplify-builds/eradleadgenapiprod-3457306d4a2b30375731-build.zip",
+          "env": "dev"
+        }
+      }
     }
   }
 }

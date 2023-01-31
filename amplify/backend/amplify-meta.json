@@ -16,7 +16,19 @@
     "eradleadgenapiprod": {
       "build": true,
       "providerPlugin": "awscloudformation",
-      "service": "Lambda"
+      "service": "Lambda",
+      "output": {
+        "LambdaExecutionRoleArn": "arn:aws:iam::877346839906:role/eradleadgenLambdaRolef4f30b24-dev",
+        "Region": "us-west-1",
+        "Arn": "arn:aws:lambda:us-west-1:877346839906:function:eradleadgenapiprod-dev",
+        "Name": "eradleadgenapiprod-dev",
+        "LambdaExecutionRole": "eradleadgenLambdaRolef4f30b24-dev"
+      },
+      "lastPushTimeStamp": "2023-01-31T18:21:00.547Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-eradleadgen-dev-141433-deployment/amplify-cfn-templates/function/eradleadgenapiprod-cloudformation-template.json",
+        "logicalId": "functioneradleadgenapiprod"
+      }
     }
   },
   "api": {
@@ -32,7 +44,17 @@
             "Arn"
           ]
         }
-      ]
+      ],
+      "output": {
+        "ApiName": "eradLeadgenApi",
+        "RootUrl": "https://rckdpht4ue.execute-api.us-west-1.amazonaws.com/dev",
+        "ApiId": "rckdpht4ue"
+      },
+      "lastPushTimeStamp": "2023-01-31T18:21:00.549Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-eradleadgen-dev-141433-deployment/amplify-cfn-templates/api/eradLeadgenApi-cloudformation-template.json",
+        "logicalId": "apieradLeadgenApi"
+      }
     }
   }
 }

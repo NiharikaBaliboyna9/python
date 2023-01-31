@@ -11,5 +11,60 @@
       "StackId": "arn:aws:cloudformation:us-west-1:877346839906:stack/amplify-eradleadgen-dev-141433/7f070280-a143-11ed-b465-0649b692b00f",
       "AmplifyAppId": "d31zkijem15y5t"
     }
+  },
+  "api": {
+    "eradLeadgenApi": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "eradleadgenapiprod"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-eradleadgen-dev-141433-deployment/amplify-cfn-templates/api/eradLeadgenApi-cloudformation-template.json",
+        "logicalId": "apieradLeadgenApi"
+      },
+      "lastPushTimeStamp": "2023-01-31T18:12:19.998Z",
+      "output": {
+        "ApiName": "eradLeadgenApi",
+        "RootUrl": "https://rckdpht4ue.execute-api.us-west-1.amazonaws.com/dev",
+        "ApiId": "rckdpht4ue"
+      },
+      "lastPushDirHash": "/qKvTq4QTkShbcRVvWUKD+py8aI="
+    }
+  },
+  "function": {
+    "eradleadgenapiprod": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda",
+      "lastBuildTimeStamp": "2023-01-31T18:08:12.943Z",
+      "lastBuildType": "PROD",
+      "lastPackageTimeStamp": "2023-01-31T18:08:18.026Z",
+      "distZipFilename": "eradleadgenapiprod-3457306d4a2b30375731-build.zip",
+      "s3Bucket": {
+        "deploymentBucketName": "amplify-eradleadgen-dev-141433-deployment",
+        "s3Key": "amplify-builds/eradleadgenapiprod-3457306d4a2b30375731-build.zip"
+      },
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-eradleadgen-dev-141433-deployment/amplify-cfn-templates/function/eradleadgenapiprod-cloudformation-template.json",
+        "logicalId": "functioneradleadgenapiprod"
+      },
+      "lastPushTimeStamp": "2023-01-31T18:12:19.998Z",
+      "output": {
+        "LambdaExecutionRoleArn": "arn:aws:iam::877346839906:role/eradleadgenLambdaRolef4f30b24-dev",
+        "Region": "us-west-1",
+        "Arn": "arn:aws:lambda:us-west-1:877346839906:function:eradleadgenapiprod-dev",
+        "Name": "eradleadgenapiprod-dev",
+        "LambdaExecutionRole": "eradleadgenLambdaRolef4f30b24-dev"
+      },
+      "lastPushDirHash": "yYXqyOviKUAfc+fTg1fuQqcPjLg="
+    }
   }
 }

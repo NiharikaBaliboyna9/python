@@ -1,0 +1,43 @@
+{
+  "api": {
+    "eradLeadgenApi": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "eradleadgenapiprod"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    }
+  },
+  "function": {
+    "eradleadgenapiprod": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_eradleadgenapiprod_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "eradleadgenapiprod"
+        }
+      ]
+    },
+    "AMPLIFY_function_eradleadgenapiprod_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "eradleadgenapiprod"
+        }
+      ]
+    }
+  }
+}
