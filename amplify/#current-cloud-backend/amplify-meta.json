@@ -1,0 +1,15 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-eradleadgen-dev-141433-authRole",
+      "UnauthRoleArn": "arn:aws:iam::877346839906:role/amplify-eradleadgen-dev-141433-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::877346839906:role/amplify-eradleadgen-dev-141433-authRole",
+      "Region": "us-west-1",
+      "DeploymentBucketName": "amplify-eradleadgen-dev-141433-deployment",
+      "UnauthRoleName": "amplify-eradleadgen-dev-141433-unauthRole",
+      "StackName": "amplify-eradleadgen-dev-141433",
+      "StackId": "arn:aws:cloudformation:us-west-1:877346839906:stack/amplify-eradleadgen-dev-141433/7f070280-a143-11ed-b465-0649b692b00f",
+      "AmplifyAppId": "d31zkijem15y5t"
+    }
+  }
+}
