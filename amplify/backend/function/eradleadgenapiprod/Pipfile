@@ -6,7 +6,7 @@ verify_ssl = true
 [dev-packages]
 
 [packages]
-src = {editable = true, path = "./src"}
+src = {editable = false, path = "./src"}
 aws-wsgi = "*"
 boto3 = "*"
 flask = "*"
